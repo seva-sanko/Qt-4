@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Figure Manager</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <!-- SQL окно -->
+      <widget class="QWidget" name="sqlWidget">
+       <layout class="QVBoxLayout" name="sqlLayout">
+        <item>
+         <widget class="QTableView" name="tableView">
+          <property name="minimumWidth">
+           <number>300</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <!-- Сцена -->
+      <widget class="QWidget" name="sceneWidget">
+       <layout class="QVBoxLayout" name="sceneLayout">
+        <item>
+         <widget class="QGraphicsView" name="graphicsView">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>300</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <!-- Окно кнопок -->
+      <widget class="QWidget" name="buttonWidget">
+       <layout class="QVBoxLayout" name="buttonLayout">
+        <item>
+         <widget class="QLineEdit" name="polygonSidesEdit">
+          <property name="placeholderText">
+           <string>Enter number of sides for polygon...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addPolygonButton">
+          <property name="text">
+           <string>Add Polygon</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addEllipseButton">
+          <property name="text">
+           <string>Add Ellipse</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addRectangleButton">
+          <property name="text">
+           <string>Add Rectangle</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deleteButton">
+          <property name="text">
+           <string>Delete Figure</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="createPairButton">
+          <property name="text">
+           <string>Create Pair</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deletePairButton">
+          <property name="text">
+           <string>Delete Pair</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="hideConnectionsButton">
+          <property name="text">
+           <string>Hide Connections</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="filterComboBox">
+          <property name="currentText">
+           <string>Все</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Все</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Полигон</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Эллипс</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Прямоугольник</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="filterButton">
+          <property name="text">
+           <string>Apply Filter</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar"/>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
